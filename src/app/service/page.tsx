@@ -12,7 +12,7 @@ import { useState, useRef } from "react"
 import emailjs from "@emailjs/browser"
 import { toast } from "sonner"
 
-const CLOUD_NAME = "dqygyq1pl"
+const CLOUD_NAME = "daacgpbbw"
 const UPLOAD_PRESET = "raiselabs_service_upload"
 
 export default function ServicePage() {
@@ -77,16 +77,16 @@ export default function ServicePage() {
       hiddenInput.value = attachmentLinks
 
       await emailjs.sendForm(
-        "service_aq575d6",
-        "template_2430i4s",
+        "service_iay5zld",
+        "template_8akzwks",
         formRef.current,
-        "IA05B7yLdhWxszPJd"
+        "vcbmLUWb67C9PcfIj"
       )
       await emailjs.sendForm(
-        "service_aq575d6",
-        "template_1jscfzo",
+        "service_iay5zld",
+        "template_4tmgwmj",
         formRef.current,
-        "IA05B7yLdhWxszPJd"
+        "vcbmLUWb67C9PcfIj"
       )
 
       toast.success(
