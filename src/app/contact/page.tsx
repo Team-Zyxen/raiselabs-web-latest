@@ -48,10 +48,10 @@ export default function ContactPage() {
 
     try {
       await emailjs.sendForm(
-        "service_aq575d6",      // Service ID
-        "",     // Template ID
+        "service_3mmpxcd",      // Service ID
+        "template_o1ac9ca",     // Template ID
         formRef.current,
-        "IA05B7yLdhWxszPJd"     // Public Key
+        "gSsPFg2kfkO9Mxygc"     // Public Key
       )
 
       toast.success("Message sent successfully! We'll get back to you soon.")
@@ -131,8 +131,8 @@ export default function ContactPage() {
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
 
                   <div className="space-y-2">
-                    <Label>First Name *</Label>
-                    <Input name="first_name" required />
+                    <Label>Full Name *</Label>
+                    <Input name="full_name" required />
                   </div>
 
                   <div className="space-y-2">
@@ -146,7 +146,7 @@ export default function ContactPage() {
                     </div>
 
                   <div className="space-y-2">
-                    <Label>Message *</Label>
+                    <Label>How can we help you? *</Label>
                     <Textarea name="message" rows={6} required />
                   </div>
 
