@@ -27,7 +27,7 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    title: "Office",
+    title: "Corporate Office Address",
     details: [
       "C-2, Industrial Park, Moula-Ali",
       "Medchal Malkajgiri Dist, Telangana 500040"
