@@ -169,11 +169,25 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                       transition={{ duration: 0.4, delay: 0.1 * index }}
                       className="flex items-start gap-2"
                     >
-                      <Check className="h-5 w-5 text-[#7F9DB1] flex-shrink-0 mt-0.5" aria-hidden="true" />
-                      <span className="text-sm">{feature.split(" ").slice(0, 4).join(" ")}...</span>
+                      <Check
+                        className="h-5 w-5 text-[#7F9DB1] flex-shrink-0 mt-0.5"
+                        aria-hidden="true"
+                      />
+                
+                      <span
+                        className="text-sm leading-relaxed overflow-hidden"
+                        style={{
+                          display: "-webkit-box",
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: "vertical",
+                        }}
+                      >
+                        {feature}
+                      </span>
                     </motion.div>
                   ))}
                 </div>
+
               </motion.div>
             </div>
           </div>
