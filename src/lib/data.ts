@@ -125,13 +125,13 @@ export const products: Product[] = [
       "Low maintenance requirements"
     ],
     specs: [
-      { label: "Measurement Range", value: "0-30 kg/cm²" },
+      { label: "Measurement Range", value: "0 – 30 kg/cm²" },
       { label: "Accuracy", value: "±1%" },
-      { label: "Display Type", value: "Analog/Digital" },
-      { label: "Power Supply", value: "Manual operation" },
-      { label: "Dimensions", value: "250 x 150 x 300 mm" },
-      { label: "Weight", value: "5 kg" }
+      { label: "Operation", value: "Manual" },
+      { label: "Construction", value: "Robust metal body" },
+      { label: "Application", value: "Tablet hardness testing" }
     ]
+
   },
   {
     id: "htds-1p",
@@ -151,13 +151,13 @@ export const products: Product[] = [
       "GMP compliant design"
     ],
     specs: [
-      { label: "Measurement Range", value: "0-200 N" },
+      { label: "Measurement Range", value: "0 – 200 N" },
       { label: "Accuracy", value: "±0.5%" },
-      { label: "Display Resolution", value: "0.1 N" },
-      { label: "Power Supply", value: "AC 220V, 50Hz" },
-      { label: "Data Storage", value: "Up to 1000 readings" },
-      { label: "Dimensions", value: "300 x 200 x 350 mm" }
+      { label: "Resolution", value: "0.1 N" },
+      { label: "Display", value: "Digital LCD" },
+      { label: "Power Supply", value: "230V / 50Hz" }
     ]
+
   },
   {
     id: "htds-3p",
@@ -177,13 +177,13 @@ export const products: Product[] = [
       "21 CFR Part 11 compliant software"
     ],
     specs: [
-      { label: "Testing Stations", value: "3 stations" },
-      { label: "Measurement Range", value: "0-300 N" },
-      { label: "Accuracy", value: "±0.3%" },
-      { label: "Testing Speed", value: "Up to 180 tablets/hour" },
-      { label: "Display", value: "10-inch touchscreen" },
-      { label: "Power Supply", value: "AC 220V, 50/60Hz" }
+      { label: "Stations", value: "3" },
+      { label: "Measurement Range", value: "0 – 300 N" },
+      { label: "Accuracy", value: "±0.5%" },
+      { label: "Display", value: "Digital" },
+      { label: "Power Supply", value: "230V / 50Hz" }
     ]
+
   },
   // FRIABILITY TESTING INSTRUMENTS
   {
@@ -204,13 +204,13 @@ export const products: Product[] = [
       "Quiet operation"
     ],
     specs: [
-      { label: "Number of Drums", value: "2" },
-      { label: "Rotation Speed", value: "25 ± 1 RPM" },
-      { label: "Drum Diameter", value: "283-291 mm" },
-      { label: "Timer Range", value: "1-999 minutes" },
-      { label: "Revolution Counter", value: "1-9999" },
-      { label: "Power Supply", value: "220V AC, 50Hz" }
+      { label: "Drums", value: "2" },
+      { label: "Speed", value: "25 RPM" },
+      { label: "Timer", value: "Programmable" },
+      { label: "Compliance", value: "USP / IP" },
+      { label: "Power Supply", value: "230V / 50Hz" }
     ]
+
   },
   {
     id: "rft-2b",
@@ -231,12 +231,12 @@ export const products: Product[] = [
     ],
     specs: [
       { label: "Drums", value: "2" },
-      { label: "Speed", value: "25 RPM (Standard)" },
-      { label: "Display", value: "LED Digital" },
-      { label: "Drum Material", value: "Acrylic (USP compliant)" },
-      { label: "Dimensions", value: "400 x 350 x 380 mm" },
-      { label: "Weight", value: "12 kg" }
+      { label: "Speed", value: "25 RPM" },
+      { label: "Timer", value: "Programmable" },
+      { label: "Compliance", value: "USP / IP" },
+      { label: "Power Supply", value: "230V / 50Hz" }
     ]
+
   },
   {
     id: "rgf-1",
@@ -256,13 +256,13 @@ export const products: Product[] = [
       "Reproducible results"
     ],
     specs: [
-      { label: "Drum Capacity", value: "1 liter" },
-      { label: "Rotation Speed", value: "10-60 rpm" },
-      { label: "Timer Range", value: "1-999 minutes" },
-      { label: "Drum Material", value: "Acrylic/Stainless steel" },
-      { label: "Power Supply", value: "AC 220V, 50Hz" },
-      { label: "Dimensions", value: "400 x 300 x 350 mm" }
+      { label: "Drum Capacity", value: "1 Liter" },
+      { label: "Speed", value: "Variable" },
+      { label: "Timer", value: "Digital" },
+      { label: "Construction", value: "Stainless Steel" },
+      { label: "Power Supply", value: "230V / 50Hz" }
     ]
+
   },
   // DISINTEGRATION TESTING INSTRUMENTS
   {
@@ -309,13 +309,13 @@ export const products: Product[] = [
       "Pharmacopoeia compliant"
     ],
     specs: [
-      { label: "Test Positions", value: "3" },
-      { label: "Temperature Range", value: "35-39°C" },
-      { label: "Temperature Stability", value: "±0.3°C" },
-      { label: "Timer Range", value: "0-99 minutes" },
-      { label: "Bath Capacity", value: "4 liters" },
-      { label: "Power Supply", value: "AC 220V, 50Hz" }
+      { label: "Stations", value: "3" },
+      { label: "Temperature Range", value: "35 – 39°C" },
+      { label: "Timer", value: "Digital" },
+      { label: "Compliance", value: "Pharmacopoeia compliant" },
+      { label: "Power Supply", value: "230V / 50Hz" }
     ]
+
   },
   {
     id: "dt-4dd",
@@ -335,13 +335,13 @@ export const products: Product[] = [
       "USP/EP/IP Compliant"
     ],
     specs: [
-      { label: "Test Stations", value: "4" },
-      { label: "Temperature Range", value: "35-42°C" },
-      { label: "Temperature Accuracy", value: "±0.5°C" },
-      { label: "Stroke Length", value: "55 ± 2 mm" },
-      { label: "Oscillation Rate", value: "30 ± 2 cycles/min" },
-      { label: "Power Supply", value: "AC 220V, 50Hz" }
+      { label: "Stations", value: "4" },
+      { label: "Temperature Range", value: "35 – 42°C" },
+      { label: "Stroke Length", value: "55 mm" },
+      { label: "Compliance", value: "USP / IP" },
+      { label: "Power Supply", value: "230V / 50Hz" }
     ]
+
   },
   {
     id: "dt-2d",
@@ -361,13 +361,13 @@ export const products: Product[] = [
       "Energy-efficient heating system"
     ],
     specs: [
-      { label: "Test Stations", value: "2" },
-      { label: "Temperature Range", value: "35-40°C" },
-      { label: "Heating Time", value: "< 30 minutes" },
-      { label: "Oscillation Frequency", value: "30 cycles/min" },
-      { label: "Power Consumption", value: "800W" },
-      { label: "Dimensions", value: "400 x 300 x 500 mm" }
+      { label: "Stations", value: "2" },
+      { label: "Temperature Range", value: "35 – 40°C" },
+      { label: "Stroke Rate", value: "30 cycles/min" },
+      { label: "Display", value: "Digital" },
+      { label: "Power Supply", value: "230V / 50Hz" }
     ]
+
   },
   // DISSOLUTION TESTING INSTRUMENTS
   {
@@ -522,12 +522,12 @@ export const products: Product[] = [
       ],
       specs: [
         { label: "Sieve Diameter", value: "200 mm / 8 inch" },
-        { label: "Amplitude Range", value: "0.5 mm – 3.0 mm" },
-        { label: "Timer Range", value: "Programmable" },
-        { label: "Memory", value: "50 programs" },
-        { label: "Data Storage", value: "1500+ reports" },
-        { label: "Construction", value: "SS-316 (cGMP)" }
+        { label: "Motion", value: "Electromagnetic" },
+        { label: "Display", value: "Digital" },
+        { label: "Timer", value: "Programmable" },
+        { label: "Power Supply", value: "230V / 50Hz" }
       ]
+
     },
     {
       id: "rss-1c",
@@ -630,12 +630,12 @@ export const products: Product[] = [
     ],
     specs: [
       { label: "Vacuum Range", value: "0 to -600 mmHg" },
-      { label: "Vacuum Stability", value: "±5 mmHg" },
-      { label: "Chamber Size", value: "200mm / 250mm / 300mm" },
-      { label: "Timer Range", value: "1-999 seconds" },
-      { label: "Power Supply", value: "220V AC, 50Hz" },
-      { label: "Body Material", value: "Powder Coated MS / SS" }
+      { label: "Timer", value: "Programmable" },
+      { label: "Display", value: "Digital" },
+      { label: "Chamber", value: "Transparent Acrylic" },
+      { label: "Power Supply", value: "230V / 50Hz" }
     ]
+
   },
     {
       id: "rlt-1",
