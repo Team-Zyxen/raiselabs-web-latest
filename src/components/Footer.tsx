@@ -21,7 +21,7 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold mb-6 text-lg flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-[#7F9DB1]" />
-                Office Address
+                Corporate Office Address
               </h3>
               <address className="not-italic text-white/90 leading-relaxed text-sm">
                 C -6, B1,Industrial Park, Moula Ali,<br />
@@ -40,7 +40,7 @@ export default function Footer() {
                   className="flex items-center gap-2 text-white/90 hover:text-[#7F9DB1] transition-colors"
                 >
                   <Phone className="h-4 w-4" />
-                  9177770365
+                  +91 9177770365
                 </a>
               </li>
               <li>
@@ -49,7 +49,7 @@ export default function Footer() {
                   className="flex items-center gap-2 text-white/90 hover:text-[#7F9DB1] transition-colors"
                 >
                   <Phone className="h-4 w-4" />
-                  9177770516
+                  +91 9177770516
                 </a>
               </li>
               <li>
