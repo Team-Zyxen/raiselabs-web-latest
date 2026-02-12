@@ -8,7 +8,6 @@ const clients = [
   { name: "Cipla", domain: "cipla.com", color: "#00529B" },
   { name: "Aurobindo", domain: "aurobindo.com", color: "#1E4D8C" },
   { name: "Biocon", domain: "biocon.com", color: "#0072BB" },
-  { name: "Hetero", domain: "hetero.com", color: "#00A859" },
   { name: "Ipca Labs", domain: "ipcalabs.com", color: "#003F87" },
   { name: "Lixil", domain: "lixil.com", color: "#FF6600" },
   { name: "Sanzyme Biologics", domain: "sanzyme.com", color: "#2E3192" },
