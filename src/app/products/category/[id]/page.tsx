@@ -1,160 +1,319 @@
-"use client"
+import { Metadata } from "next";
+import CategoryView from "@/components/pages/CategoryView";
+import { getCategoryById, getProductsByCategory } from "@/lib/data";
+import { generateBreadcrumbSchema } from "@/lib/seo";
+import { notFound } from "next/navigation";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowLeft, ArrowRight } from "lucide-react"
-import Navigation from "@/components/Navigation"
-import Footer from "@/components/Footer"
-import { Button } from "@/components/ui/button"
-import { getCategoryById, getProductsByCategory } from "@/lib/data"
-import { generateBreadcrumbSchema } from "@/lib/seo"
-import { notFound } from "next/navigation"
-import { use } from "react"
+const categorySEO: Record<string, { title: string; description: string; h1: string }> = {
+  "hardness-testing": {
+    title: 'Tablet Hardness Tester Manufacturer India │ Raise Lab Equipment',
+    description: 'Buy USP/EP/IP compliant tablet hardness testers from Raise Lab Equipment. Manual & automatic models. Trusted by 500+ pharma companies.',
+    h1: "Tablet Hardness Testers — USP/EP/IP Compliant │ Raise Lab Equipment"
+  },
+  "friability-testing": {
+    title: 'Tablet Friability Tester Manufacturer India │ Raise Lab Equipment',
+    description: 'Raise Lab Equipment tablet friability testers meet USP <1216> & EP standards. Single, double & triple drum models. Made in Hyderabad.',
+    h1: "Tablet Friability Testers — USP <1216> Compliant │ Raise Lab Equipment"
+  },
+  "disintegration-testing": {
+    title: 'Tablet Disintegration Tester Manufacturer │ Raise Lab Equipment, Hyderabad',
+    description: 'Automated and manual tablet disintegration testers compliant with USP <701> and Ph.Eur. 2.9.1. 21 CFR Part 11 ready. Manufacturer in Hyderabad, India.',
+    h1: "Tablet Disintegration Testers — Automated & Manual Models │ Raise Lab Equipment"
+  },
+  "dissolution-testing": {
+    title: 'USP Dissolution Tester Manufacturer India │ Raise Lab Equipment',
+    description: 'USP <711> compliant dissolution testing apparatus — Apparatus 1 & 2 (basket & paddle). Multi-station, automated models. Pharma manufacturer, Hyderabad.',
+    h1: "Pharmaceutical Dissolution Testers — USP <711> Compliant │ Raise Lab Equipment"
+  },
+  "powder-testing": {
+    title: 'Powder Testing Instruments Manufacturer India │ Raise Lab Equipment',
+    description: 'Powder testing instruments for pharma QC — tapped density apparatus, powder flow testers, sieve shakers. USP compliant. Raise Lab Equipment, Hyderabad.',
+    h1: "Powder Testing Instruments — Tapped Density, Flow Tester, Sieve Shaker"
+  },
+  "packaging-integrity": {
+    title: 'Vacuum Leak Test Apparatus Manufacturer India │ Raise Lab Equipment',
+    description: 'Vacuum leak test apparatus for pharmaceutical packaging integrity testing. Bubble emission method. Suitable for BFS, bottles, blisters. Hyderabad, India.',
+    h1: "Vacuum Leak Test Apparatus — Package Integrity Testing Equipment"
+  },
+  "lacquer-porosity-testing": {
+    title: 'Lacquer Porosity Tester Manufacturer India │ Raise Lab Equipment',
+    description: 'Digital lacquer porosity testers for aluminium tubes, aerosol cans, bottle caps and foils. Detects coating defects with precision. Made in India.',
+    h1: "Lacquer Porosity Testers for Aluminium Tubes, Cans & Foils │ Raise Lab Equipment"
+  },
+  "analytical-instruments": {
+    title: 'Antibiotic Zone Reader & Ampoule Tester Manufacturer │ Raise Lab Equipment',
+    description: 'Antibiotic zone readers and ampoule breakpoint testers for pharmaceutical labs. CLSI & cGMP compliant. Raise Lab Equipment — analytical instruments, Hyderabad.',
+    h1: "Analytical Instruments for Pharmaceutical Labs │ Raise Lab Equipment"
+  }
+};
 
-export default function CategoryPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params)
+const productSchemaMapping: Record<string, any> = {
+  "friability-testing": {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Tablet Friability Tester",
+    "description": "Raise Lab Equipment tablet friability testers meet USP <1216> & EP standards. Single, double & triple drum models.",
+    "brand": { "@type": "Brand", "name": "Raise Lab Equipment" },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Raise Lab Equipment Pvt. Ltd.",
+      "url": "https://www.raiselabequip.com"
+    },
+    "model": "RFT-1 / RFT-2P",
+    "category": "Pharmaceutical Testing Equipment",
+    "image": "https://www.raiselabequip.com/images/products/RFT-2P.webp",
+    "url": "https://www.raiselabequip.com/products/category/friability-testing",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "INR",
+      "seller": { "@type": "Organization", "name": "Raise Lab Equipment Pvt. Ltd." }
+    }
+  },
+  "disintegration-testing": {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Disintegration Tester",
+    "description": "Automated and manual tablet disintegration testers compliant with USP <701> and Ph.Eur. 2.9.1.",
+    "brand": { "@type": "Brand", "name": "Raise Lab Equipment" },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Raise Lab Equipment Pvt. Ltd.",
+      "url": "https://www.raiselabequip.com"
+    },
+    "model": "RDT-2 / ADT-2B / ADT-2D",
+    "category": "Pharmaceutical Testing Equipment",
+    "image": "https://www.raiselabequip.com/images/products/ADT-2D.webp",
+    "url": "https://www.raiselabequip.com/products/category/disintegration-testing",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "INR",
+      "seller": { "@type": "Organization", "name": "Raise Lab Equipment Pvt. Ltd." }
+    }
+  },
+  "dissolution-testing": {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Dissolution Tester",
+    "description": "USP <711> compliant dissolution testing apparatus — Apparatus 1 & 2 (basket & paddle).",
+    "brand": { "@type": "Brand", "name": "Raise Lab Equipment" },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Raise Lab Equipment Pvt. Ltd.",
+      "url": "https://www.raiselabequip.com"
+    },
+    "model": "RLTDT-08LM",
+    "category": "Pharmaceutical Testing Equipment",
+    "image": "https://www.raiselabequip.com/images/products/RLTDT-08LM.webp",
+    "url": "https://www.raiselabequip.com/products/category/dissolution-testing",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "INR",
+      "seller": { "@type": "Organization", "name": "Raise Lab Equipment Pvt. Ltd." }
+    }
+  },
+  "powder-testing": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Tapped Density Apparatus",
+      "description": "Powder testing instruments for pharma QC — tapped density apparatus. USP compliant.",
+      "brand": { "@type": "Brand", "name": "Raise Lab Equipment" },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Raise Lab Equipment Pvt. Ltd.",
+        "url": "https://www.raiselabequip.com"
+      },
+      "model": "TD-2",
+      "category": "Pharmaceutical Testing Equipment",
+      "image": "https://www.raiselabequip.com/images/products/TD-2.webp",
+      "url": "https://www.raiselabequip.com/products/category/powder-testing",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "INR",
+        "seller": { "@type": "Organization", "name": "Raise Lab Equipment Pvt. Ltd." }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Powder Flow Tester",
+      "description": "Powder testing instruments for pharma QC — powder flow testers. USP compliant.",
+      "brand": { "@type": "Brand", "name": "Raise Lab Equipment" },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Raise Lab Equipment Pvt. Ltd.",
+        "url": "https://www.raiselabequip.com"
+      },
+      "model": "RPF-1",
+      "category": "Pharmaceutical Testing Equipment",
+      "image": "https://www.raiselabequip.com/images/products/RPF-1.webp",
+      "url": "https://www.raiselabequip.com/products/category/powder-testing",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "INR",
+        "seller": { "@type": "Organization", "name": "Raise Lab Equipment Pvt. Ltd." }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Electromagnetic Sieve Shaker",
+      "description": "Powder testing instruments for pharma QC — sieve shakers. USP compliant.",
+      "brand": { "@type": "Brand", "name": "Raise Lab Equipment" },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Raise Lab Equipment Pvt. Ltd.",
+        "url": "https://www.raiselabequip.com"
+      },
+      "model": "RSS-1",
+      "category": "Pharmaceutical Testing Equipment",
+      "image": "https://www.raiselabequip.com/images/products/RSS-1.webp",
+      "url": "https://www.raiselabequip.com/products/category/powder-testing",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "INR",
+        "seller": { "@type": "Organization", "name": "Raise Lab Equipment Pvt. Ltd." }
+      }
+    }
+  ],
+  "packaging-integrity": {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Vacuum Leak Test Apparatus",
+    "description": "Vacuum leak test apparatus for pharmaceutical packaging integrity testing. Bubble emission method.",
+    "brand": { "@type": "Brand", "name": "Raise Lab Equipment" },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Raise Lab Equipment Pvt. Ltd.",
+      "url": "https://www.raiselabequip.com"
+    },
+    "model": "RLT-2 / RLT-2B",
+    "category": "Pharmaceutical Testing Equipment",
+    "image": "https://www.raiselabequip.com/images/products/RLT-2.webp",
+    "url": "https://www.raiselabequip.com/products/category/packaging-integrity",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "INR",
+      "seller": { "@type": "Organization", "name": "Raise Lab Equipment Pvt. Ltd." }
+    }
+  },
+  "lacquer-porosity-testing": {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Lacquer Porosity Tester",
+    "description": "Digital lacquer porosity testers for aluminium tubes, aerosol cans, bottle caps and foils.",
+    "brand": { "@type": "Brand", "name": "Raise Lab Equipment" },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Raise Lab Equipment Pvt. Ltd.",
+      "url": "https://www.raiselabequip.com"
+    },
+    "model": "RLP series",
+    "category": "Pharmaceutical Testing Equipment",
+    "image": "https://www.raiselabequip.com/images/products/RLP.webp",
+    "url": "https://www.raiselabequip.com/products/category/lacquer-porosity-testing",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "INR",
+      "seller": { "@type": "Organization", "name": "Raise Lab Equipment Pvt. Ltd." }
+    }
+  },
+  "analytical-instruments": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Antibiotic Zone Reader",
+      "description": "Antibiotic zone readers for pharmaceutical labs. CLSI & cGMP compliant.",
+      "brand": { "@type": "Brand", "name": "Raise Lab Equipment" },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Raise Lab Equipment Pvt. Ltd.",
+        "url": "https://www.raiselabequip.com"
+      },
+      "model": "RAZ-1C",
+      "category": "Pharmaceutical Testing Equipment",
+      "image": "https://www.raiselabequip.com/images/products/RAZ-1C.webp",
+      "url": "https://www.raiselabequip.com/products/category/analytical-instruments",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "INR",
+        "seller": { "@type": "Organization", "name": "Raise Lab Equipment Pvt. Ltd." }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Ampoule Breakpoint Tester",
+      "description": "Ampoule breakpoint testers for pharmaceutical labs. CLSI & cGMP compliant.",
+      "brand": { "@type": "Brand", "name": "Raise Lab Equipment" },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Raise Lab Equipment Pvt. Ltd.",
+        "url": "https://www.raiselabequip.com"
+      },
+      "model": "RABT-3",
+      "category": "Pharmaceutical Testing Equipment",
+      "image": "https://www.raiselabequip.com/images/products/RABT-3.webp",
+      "url": "https://www.raiselabequip.com/products/category/analytical-instruments",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "INR",
+        "seller": { "@type": "Organization", "name": "Raise Lab Equipment Pvt. Ltd." }
+      }
+    }
+  ]
+};
 
-  const category = getCategoryById(id)
-  const products = getProductsByCategory(id) ?? []
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const seo = categorySEO[id];
+  
+  if (!seo) return {};
+
+  return {
+    title: seo.title,
+    description: seo.description,
+    alternates: {
+      canonical: `https://www.raiselabequip.com/products/category/${id}`,
+    },
+  };
+}
+
+export default async function CategoryPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const category = getCategoryById(id);
+  const products = getProductsByCategory(id) ?? [];
 
   if (!id || !category) {
-    notFound()
+    notFound();
   }
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: "/" },
     { name: "Products", url: "/products" },
     { name: category.name, url: `/products/category/${id}` },
-  ])
+  ]);
+
+  const h1 = categorySEO[id]?.h1 || category.name;
+  const productSchema = productSchemaMapping[id];
 
   return (
-    <>
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-
-      <Navigation />
-
-      <main className="pt-16 lg:pt-20">
-        <nav className="container mx-auto px-4 lg:px-8 py-8" aria-label="Breadcrumb">
-          <Link href="/products">
-            <motion.div
-              whileHover={{ x: -5 }}
-              className="inline-flex items-center text-muted-foreground hover:text-[#1a1f3a] transition-colors"
-            >
-              <ArrowLeft className="h-5 w-5 mr-2" aria-hidden="true" />
-              Back to Categories
-            </motion.div>
-          </Link>
-        </nav>
-
-        <section className="pb-20" aria-labelledby="category-title">
-            <div className="container mx-auto px-4 lg:px-8">
-              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6 }}
-                  className="relative w-full lg:w-[400px] h-[300px] lg:h-[400px] rounded-2xl overflow-hidden bg-white border border-[#7F9DB1]/20 shadow-lg flex-shrink-0"
-                >
-                  <Image
-                    src={category.image}
-                    alt={category.name}
-                    fill
-                    className="object-contain p-4"
-                    sizes="(max-width: 1024px) 100vw, 400px"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1f3a]/80 via-[#1a1f3a]/20 to-transparent" />
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="flex-1"
-                >
-                  <div className="inline-block px-3 py-1 bg-[#7F9DB1]/10 text-[#7F9DB1] text-sm font-medium rounded-full mb-4 border border-[#7F9DB1]/20">
-                    {products.length} Products
-                  </div>
-                  <h1 id="category-title" className="text-4xl lg:text-6xl font-bold mb-6">
-                    {category.name}
-                  </h1>
-                  <p className="text-lg lg:text-xl text-muted-foreground">
-                    {category.description}
-                  </p>
-                </motion.div>
-              </div>
-            </div>
-          </section>
-
-        <section className="pb-20 lg:pb-32" aria-label="Products in this category">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {products.map((product, index) => (
-                <motion.article
-                  key={product.id}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                    <Link href={`/products/${product.id}`}>
-                      <motion.div
-                        whileHover={{ y: -8 }}
-                        transition={{ duration: 0.3 }}
-                        className="group relative h-[480px] rounded-2xl overflow-hidden bg-card border border-[#7F9DB1]/20 shadow-lg hover:shadow-2xl hover:border-[#7F9DB1]/40 flex flex-col"
-                      >
-                            <div className="relative w-full h-[280px] flex-shrink-0 bg-white">
-                              <Image
-                                  src={product.image}
-                                  alt={`${product.title} - ${product.description} by Raise Lab Equipment`}
-                                  fill
-                                    className="object-contain p-1 transition-transform duration-500 scale-75 md:scale-100 group-hover:scale-110"
-                                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                  loading="lazy"
-                                />
-                            </div>
-
-                          <div className="p-6 flex flex-col flex-1">
-                            <h2 className="text-xl font-bold mb-2 line-clamp-2 text-[#1a1f3a]">
-                              {product.title}
-                            </h2>
-                              <p className="text-muted-foreground text-sm mb-4 line-clamp-2 flex-1">
-                                {product.description}
-                              </p>
-                                  <div className="flex flex-col gap-3 mt-auto">
-                                    <Button variant="outline" className="w-full text-[#1a1f3a] border-[#7F9DB1]/30 hover:border-[#7F9DB1] hover:bg-[#7F9DB1]/5">
-                                      View Details
-                                      <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-                                    </Button>
-                                  </div>
-                            </div>
-
-                    </motion.div>
-                  </Link>
-                </motion.article>
-              ))}
-            </div>
-
-            {products.length === 0 && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-center py-20"
-              >
-                <p className="text-xl text-muted-foreground">
-                  No products found in this category.
-                </p>
-              </motion.div>
-            )}
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </>
-  )
+    <CategoryView 
+      category={category} 
+      products={products} 
+      h1={h1} 
+      breadcrumbSchema={breadcrumbSchema}
+      productSchema={productSchema}
+    />
+  );
 }

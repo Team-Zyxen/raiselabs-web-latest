@@ -1,0 +1,86 @@
+# === RAISE LAB EQUIPMENT — 301 REDIRECT MAP ===
+# Place ABOVE the '# BEGIN WordPress' block
+
+RewriteEngine On
+
+# ── Homepage ──────────────────────────────────────────────────
+RewriteRule ^$ https://www.raiselabequip.com/ [R=301,L]
+
+# ── Product Category Pages ────────────────────────────────────
+RewriteRule ^category/tablet-hardness-tester/?$ /products/category/hardness-testing [R=301,L]
+RewriteRule ^category/tablet-friability-tester/?$ /products/category/friability-testing [R=301,L]
+RewriteRule ^category/disintegration-tester/?$ /products/category/disintegration-testing [R=301,L]
+RewriteRule ^category/dissolution-tester/?$ /products/category/dissolution-testing [R=301,L]
+RewriteRule ^category/powder-testing/?$ /products/category/powder-testing [R=301,L]
+RewriteRule ^category/leak-test-apparatus/?$ /products/category/packaging-integrity [R=301,L]
+RewriteRule ^category/lacquer-porosity-tester/?$ /products/category/lacquer-porosity-testing [R=301,L]
+RewriteRule ^category/analytical-instruments/?$ /products/category/analytical-instruments [R=301,L]
+
+# ── Individual Product Pages ──────────────────────────────────
+# Redirect short IDs to descriptive slugs
+RewriteRule ^products/rht-3b/?$ /products/tablet-hardness-tester-rht-3b [R=301,L]
+RewriteRule ^products/rpht-1p/?$ /products/manual-hardness-tester-rpht-1p [R=301,L]
+RewriteRule ^products/htds-1p/?$ /products/digital-tablet-hardness-tester-htds-1p [R=301,L]
+RewriteRule ^products/htds-3p/?$ /products/multi-station-hardness-tester-htds-3p [R=301,L]
+RewriteRule ^products/rft-2p/?$ /products/tablet-friability-tester-rft-2p [R=301,L]
+RewriteRule ^products/rft-2b/?$ /products/tablet-friability-tester-rft-2b [R=301,L]
+RewriteRule ^products/rgf-1/?$ /products/granule-friability-tester-rgf-1 [R=301,L]
+RewriteRule ^products/adt-2d/?$ /products/automatic-tablet-disintegration-tester-adt-2b [R=301,L]
+RewriteRule ^products/rsdt-3b/?$ /products/suppository-disintegration-tester-rsdt-3b [R=301,L]
+RewriteRule ^products/dt-4dd/?$ /products/4-station-disintegration-tester-dt-4dd [R=301,L]
+RewriteRule ^products/dt-2d/?$ /products/2-station-disintegration-tester-dt-2d [R=301,L]
+RewriteRule ^products/rltdt-08lm/?$ /products/tablet-dissolution-tester-rltdt-08lm [R=301,L]
+RewriteRule ^products/rltdt-14lm/?$ /products/tablet-dissolution-tester-rltdt-14lm [R=301,L]
+RewriteRule ^products/rltdt-14sa/?$ /products/tablet-dissolution-tester-rltdt-14sa [R=301,L]
+RewriteRule ^products/rltdt-08sa/?$ /products/dissolution-tester-rltdt-08sa [R=301,L]
+RewriteRule ^products/td-2/?$ /products/tapped-density-apparatus-td-2 [R=301,L]
+RewriteRule ^products/rss-1/?$ /products/electromagnetic-sieve-shaker-rss-1 [R=301,L]
+RewriteRule ^products/rss-1c/?$ /products/electromagnetic-sieve-shaker-rss-1c [R=301,L]
+RewriteRule ^products/rsv-1/?$ /products/scott-volumeter-rsv-1 [R=301,L]
+RewriteRule ^products/rpf-1/?$ /products/powder-flow-tester-rpf-1 [R=301,L]
+RewriteRule ^products/rlt-2b/?$ /products/leak-test-apparatus-rlt-2b [R=301,L]
+RewriteRule ^products/rlt-1/?$ /products/leak-test-apparatus-rlt-2 [R=301,L]
+RewriteRule ^products/rlt-10b/?$ /products/lacquer-porosity-tester-rlt-10b [R=301,L]
+RewriteRule ^products/rlt-5b/?$ /products/lacquer-porosity-tester-rlt-5b [R=301,L]
+RewriteRule ^products/rabt-3/?$ /products/ampoule-breakpoint-tester-rabt-3 [R=301,L]
+RewriteRule ^products/mzr/?$ /products/antibiotic-zone-reader-mzr [R=301,L]
+
+# Legacy Product Redirects
+RewriteRule ^product/tablet-hardness-tester-in-inida/?$ /products/tablet-hardness-tester-rht-3b [R=301,L]
+RewriteRule ^product/tablet-friability-testers/?$ /products/tablet-friability-tester-rft-2p [R=301,L]
+RewriteRule ^tablet-friability-tester/?$ /products/tablet-friability-tester-rft-2p [R=301,L]
+RewriteRule ^tablet-hardness-tester-all-to-know-about/?$ /products/tablet-hardness-tester-rht-3b [R=301,L]
+RewriteRule ^vacuum-leak-test-apparatus/?$ /products/category/packaging-integrity [R=301,L]
+RewriteRule ^antibiotic-zone-reader/?$ /products/antibiotic-zone-reader-mzr [R=301,L]
+RewriteRule ^digital-lacquer-porosity-tester-aluminum-tubes-cans-bottle-caps-and-foils/?$ /products/lacquer-porosity-tester-rlt-10b [R=301,L]
+RewriteRule ^manual-powder-flow-tester-bulk-density/?$ /products/powder-flow-tester-rpf-1 [R=301,L]
+RewriteRule ^overview-of-the-rss-1-electromagnetic-sieve-shaker-by-raise-lab-equipment/?$ /products/electromagnetic-sieve-shaker-rss-1 [R=301,L]
+RewriteRule ^the-scott-volumeter-your-essential-tool-for-accurate-bulk-density-testing/?$ /products/scott-volumeter-rsv-1 [R=301,L]
+
+# ── Blog / Article Pages ──────────────────────────────────────
+RewriteRule ^automated-tablet-disintegration-testing-features-benefits-and-compliance/?$ /blog [R=301,L]
+RewriteRule ^dissolution-tester-calibration-and-validation-process/?$ /blog [R=301,L]
+RewriteRule ^mastering-gmp-cgmp-quality-standards-in-pharma/?$ /blog [R=301,L]
+
+# ── Tag / Archive Pages ───────────────────────────────────────
+RewriteRule ^tag/analytical-instruments/?$ /products/category/analytical-instruments [R=301,L]
+RewriteRule ^blog/?$ /blog [R=301,L]
+
+# ── Static / Info Pages ───────────────────────────────────────
+RewriteRule ^about/?$ /about [R=301,L]
+RewriteRule ^contact/?$ /contact [R=301,L]
+RewriteRule ^service/?$ /service [R=301,L]
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress

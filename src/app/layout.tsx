@@ -26,10 +26,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_BASE_URL || "https://raiselabequip.com"
-  ),
-
+  metadataBase: new URL("https://www.raiselabequip.com"),
   title: {
     default:
       "Raise Lab Equipment | Pharmaceutical Testing Instruments Manufacturer in Hyderabad, India",
@@ -123,34 +120,51 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const structuredData = {
+  const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Raise Lab Equipment",
-    url: "https://raiselabequip.com",
-    logo: "https://raiselabequip.com/images/logo.png",
-    description:
-      "Manufacturer of pharmaceutical testing instruments including tablet hardness testers, dissolution testers and USP compliant QC equipment.",
-    address: {
+    "@type": ["Organization", "LocalBusiness"],
+    "name": "Raise Lab Equipment Pvt. Ltd.",
+    "alternateName": "RLE",
+    "url": "https://www.raiselabequip.com",
+    "logo": "https://www.raiselabequip.com/logo.png",
+    "description": "ISO certified manufacturer of pharmaceutical testing instruments including tablet hardness testers, dissolution apparatus, disintegration testers, and friability testers. Based in Hyderabad, India.",
+    "foundingDate": "2013",
+    "address": {
       "@type": "PostalAddress",
-      addressLocality: "Hyderabad",
-      addressRegion: "Telangana",
-      addressCountry: "India",
+      "streetAddress": "C-6, B1, Industrial Park, Moula Ali",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "postalCode": "500040",
+      "addressCountry": "IN"
     },
+    "telephone": ["+91-9177770365", "+91-9177770516"],
+    "email": "info@raiselabequip.com",
+    "sameAs": ["https://in.linkedin.com/company/raise-lab-equipment-pvt-ltd"],
+    "areaServed": "IN",
+    "numberOfEmployees": { "@type": "QuantitativeValue", "value": "50" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Pharmaceutical Testing Instruments",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tablet Hardness Tester" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tablet Friability Tester" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tablet Disintegration Tester" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Dissolution Tester" } }
+      ]
+    }
   };
 
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className="antialiased font-sans">
-        {/* JSON-LD Structured Data */}
-        <Script
-          id="structured-data"
+      <head>
+        <script
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
+            __html: JSON.stringify(organizationSchema)
           }}
         />
+      </head>
+      <body className="antialiased font-sans">
 
         {/* Browser Logs */}
         <Script

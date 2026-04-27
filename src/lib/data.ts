@@ -82,7 +82,7 @@ export const categories: Category[] = [
 export const products: Product[] = [
   // HARDNESS TESTING INSTRUMENTS
   {
-    id: "rht-3b",
+    id: "tablet-hardness-tester-rht-3b",
     title: "Tablet Hardness Tester RHT-3B",
     description: "Professional digital tablet hardness tester for precise breaking force measurement",
     fullDescription: "The Tablet Hardness Tester RHT-3B is a high-precision instrument designed for the pharmaceutical industry to measure the hardness of tablets. It features advanced digital control, high accuracy sensors, and a robust design suitable for intensive laboratory use. Compliant with international pharmacopoeia standards.",
@@ -108,7 +108,7 @@ export const products: Product[] = [
     ]
   },
   {
-    id: "rpht-1p",
+    id: "manual-hardness-tester-rpht-1p",
     title: "Manual Hardness Tester RPHT-1P",
     description: "Reliable manual hardness tester for precise tablet breaking force measurement",
     fullDescription: "The Manual Hardness Tester RPHT-1P from Raise Lab Equipment is designed for accurate measurement of tablet hardness and breaking force. This robust instrument provides reliable results with its precision mechanism and easy-to-read display. Ideal for quality control laboratories in pharmaceutical manufacturing.",
@@ -134,7 +134,7 @@ export const products: Product[] = [
 
   },
   {
-    id: "htds-1p",
+    id: "digital-tablet-hardness-tester-htds-1p",
     title: "Digital Tablet Hardness Tester HTDS-1P",
     description: "Digital tablet hardness tester with advanced features and precise measurements",
     fullDescription: "The Digital Tablet Hardness Tester HTDS-1P from Raise Lab Equipment combines precision engineering with modern digital technology. This instrument offers accurate hardness testing with digital display, data storage capabilities, and user-friendly interface. Perfect for pharmaceutical QC laboratories requiring reliable and repeatable results.",
@@ -160,7 +160,7 @@ export const products: Product[] = [
 
   },
   {
-    id: "htds-3p",
+    id: "multi-station-hardness-tester-htds-3p",
     title: "Multi-Station Hardness Tester HTDS-3P",
     description: "Advanced multi-station hardness tester for high-throughput testing",
     fullDescription: "The Multi-Station Hardness Tester HTDS-3P from Raise Lab Equipment is a sophisticated instrument designed for high-volume testing environments. With three testing stations, automated operations, and comprehensive data management, this system significantly increases laboratory productivity while maintaining exceptional accuracy.",
@@ -187,7 +187,7 @@ export const products: Product[] = [
   },
   // FRIABILITY TESTING INSTRUMENTS
   {
-    id: "rft-2p",
+    id: "tablet-friability-tester-rft-2p",
     title: "Tablet Friability Tester RFT-2P",
     description: "Precision drum friability tester for pharmaceutical tablet durability testing",
     fullDescription: "The Tablet Friability Tester RFT-2P is designed for testing the durability of tablets against mechanical stress and abrasion. It features high-quality acrylic drums and precise rotation control, meeting all requirements of the USP, EP, and JP pharmacopoeias.",
@@ -213,7 +213,7 @@ export const products: Product[] = [
 
   },
   {
-    id: "rft-2b",
+    id: "tablet-friability-tester-rft-2b",
     title: "Tablet Friability Tester RFT-2B",
     description: "Advanced dual-drum friability tester with digital controls",
     fullDescription: "The Tablet Friability Tester RFT-2B is a sophisticated dual-drum instrument for comprehensive friability testing. It offers enhanced digital controls, precise timing, and robust construction for consistent results in pharmaceutical QC environments.",
@@ -239,7 +239,7 @@ export const products: Product[] = [
 
   },
   {
-    id: "rgf-1",
+    id: "granule-friability-tester-rgf-1",
     title: "Granule Friability Tester RGF-1",
     description: "Specialized tester for measuring granule strength and friability",
     fullDescription: "The Granule Friability Tester RGF-1 from Raise Lab Equipment is specifically designed to test the mechanical strength and friability of granules in accordance with industry standards.",
@@ -266,7 +266,7 @@ export const products: Product[] = [
   },
   // DISINTEGRATION TESTING INSTRUMENTS
   {
-    id: "adt-2d",
+    id: "automatic-tablet-disintegration-tester-adt-2b",
     title: "Automatic Tablet Disintegration Tester ADT-2B",
     description: "Two-station automatic disintegration tester with precise temperature control",
     fullDescription: "The Automatic Tablet Disintegration Tester ADT-2B is a two-station instrument designed for testing the disintegration time of tablets, capsules, and other solid dosage forms. It features automatic lift mechanisms, precise water bath temperature control, and individual station timing.",
@@ -292,7 +292,7 @@ export const products: Product[] = [
     ]
   },
   {
-    id: "rsdt-3b",
+    id: "suppository-disintegration-tester-rsdt-3b",
     title: "Suppository Disintegration Tester RSDT-3B",
     description: "Specialized tester for suppository disintegration and melting time",
     fullDescription: "The Suppository Disintegration Tester RSDT-3B from Raise Lab Equipment is specifically designed for testing the disintegration and melting characteristics of suppositories in accordance with international standards.",
@@ -318,7 +318,7 @@ export const products: Product[] = [
 
   },
   {
-    id: "dt-4dd",
+    id: "4-station-disintegration-tester-dt-4dd",
     title: "4-Station Disintegration Tester DT-4DD",
     description: "Four-station disintegration tester with digital temperature control",
     fullDescription: "The 4-Station Disintegration Tester DT-4DD from Raise Lab Equipment offers four independent testing stations with precise temperature control. This versatile instrument tests tablet disintegration time according to pharmacopoeia standards.",
@@ -344,7 +344,7 @@ export const products: Product[] = [
 
   },
   {
-    id: "dt-2d",
+    id: "2-station-disintegration-tester-dt-2d",
     title: "2-Station Disintegration Tester DT-2D",
     description: "Compact two-station disintegration tester for routine testing",
     fullDescription: "The 2-Station Disintegration Tester DT-2D from Raise Lab Equipment is a compact and efficient instrument designed for routine disintegration testing. With two testing stations and user-friendly controls, it provides accurate results while maintaining a small laboratory footprint.",
@@ -371,7 +371,7 @@ export const products: Product[] = [
   },
   // DISSOLUTION TESTING INSTRUMENTS
   {
-    id: "rltdt-08lm",
+    id: "tablet-dissolution-tester-rltdt-08lm",
     title: "Tablet Dissolution Tester RLTDT-08LM",
     description: "8-vessel dissolution tester with precise speed and temperature control",
     fullDescription: "The Tablet Dissolution Tester RLTDT-08LM is a high-performance 8-vessel system for pharmaceutical dissolution testing. It features high-accuracy rotation speed control, uniform temperature distribution, and a user-friendly interface for setting up and monitoring tests.",
@@ -397,7 +397,7 @@ export const products: Product[] = [
     ]
   },
   {
-    id: "rltdt-14lm",
+    id: "tablet-dissolution-tester-rltdt-14lm",
     title: "Tablet Dissolution Tester RLTDT-14LM",
     description: "High-capacity 14-vessel dissolution tester for increased lab throughput",
     fullDescription: "The Tablet Dissolution Tester RLTDT-14LM is an advanced, high-capacity system designed for high-throughput dissolution testing. With 14 vessels, it allows for simultaneous testing of multiple batches or comparative studies, significantly increasing laboratory productivity while maintaining exceptional precision.",
@@ -423,7 +423,7 @@ export const products: Product[] = [
     ]
   },
   {
-    id: "rltdt-14sa",
+    id: "tablet-dissolution-tester-rltdt-14sa",
     title: "Tablet Dissolution Tester RLTDT-14SA",
     description: "Semi-automatic 14-vessel dissolution tester for streamlined workflows",
     fullDescription: "The Tablet Dissolution Tester RLTDT-14SA is a semi-automatic version of our 14-vessel system, featuring integrated sampling automation to reduce manual error and improve consistency. Ideal for busy QC labs needing reliable, automated data collection and precise test execution.",
@@ -449,7 +449,7 @@ export const products: Product[] = [
     ]
   },
   {
-    id: "rltdt-08sa",
+    id: "dissolution-tester-rltdt-08sa",
     title: "Dissolution Tester RLTDT-08SA",
     description: "Advanced eight-vessel dissolution tester with semi-automated sampling",
     fullDescription: "The Dissolution Tester RLTDT-08SA from Raise Lab Equipment combines precision testing with semi-automated sampling capabilities for improved efficiency.",
@@ -476,7 +476,7 @@ export const products: Product[] = [
   },
   // POWDER TESTING INSTRUMENTS
   {
-    id: "td-2",
+    id: "tapped-density-apparatus-td-2",
     title: "Tapped Density Apparatus TD-2",
     description: "Precision apparatus for measuring tapped density of powders",
     fullDescription: "The Tapped Density Apparatus TD-2 from Raise Lab Equipment is designed for accurate measurement of powder tapped density. Essential for powder characterization in pharmaceutical development.",
@@ -502,7 +502,7 @@ export const products: Product[] = [
     ]
   },
     {
-      id: "rss-1",
+      id: "electromagnetic-sieve-shaker-rss-1",
       title: "Electromagnetic Sieve Shaker RSS-1",
       description: "High-performance electromagnetic sieve shaker for particle size analysis",
       fullDescription: "The Electromagnetic Sieve Shaker RSS-1 from Raise Lab Equipment provides efficient particle size analysis through electromagnetic oscillation with heavy-duty base for stability.",
@@ -530,7 +530,7 @@ export const products: Product[] = [
 
     },
     {
-      id: "rss-1c",
+      id: "electromagnetic-sieve-shaker-rss-1c",
       title: "Electromagnetic Sieve Shaker RSS-1C",
       description: "Advanced electromagnetic sieve shaker for high-precision particle size analysis",
       fullDescription: "The Electromagnetic Sieve Shaker RSS-1C is an advanced version offering enhanced control over vibration parameters for the most demanding particle size analysis requirements.",
@@ -556,7 +556,7 @@ export const products: Product[] = [
       ]
     },
     {
-      id: "rsv-1",
+      id: "scott-volumeter-rsv-1",
       title: "Scott Volumeter RSV-1",
       description: "Standard volumeter for measuring powder bulk density",
       fullDescription: "The Scott Volumeter RSV-1 from Raise Lab Equipment is a standardized instrument for measuring the apparent or bulk density of powders following the Scott method.",
@@ -584,7 +584,7 @@ export const products: Product[] = [
       ]
     },
     {
-      id: "rpf-1",
+      id: "powder-flow-tester-rpf-1",
       title: "Powder Flow Tester RPF-1",
       description: "Comprehensive apparatus for testing powder flow properties",
       fullDescription: "The Powder Flow Tester RPF-1 from Raise Lab Equipment is designed to measure angle of repose and flow rate of powders. Critical for formulation development and manufacturing optimization.",
@@ -612,7 +612,7 @@ export const products: Product[] = [
     },
   // PACKAGING INTEGRITY TESTING INSTRUMENTS
   {
-    id: "rlt-2b",
+    id: "leak-test-apparatus-rlt-2b",
     title: "Leak Test Apparatus RLT-2B",
     description: "Advanced bubble emission test apparatus for packaging integrity",
     fullDescription: "The Leak Test Apparatus RLT-2B is a professional solution for testing the integrity of pharmaceutical packaging, including blister packs, strips, and bottles. It uses the vacuum-induced bubble emission method to detect even the smallest leaks, ensuring product sterility and shelf life.",
@@ -638,7 +638,7 @@ export const products: Product[] = [
 
   },
     {
-      id: "rlt-1",
+      id: "leak-test-apparatus-rlt-2",
       title: "Leak Test Apparatus RLT-2",
       description: "Economical leak testing solution for packaging integrity",
       fullDescription: "The Leak Test Apparatus RLT-2 from Raise Lab Equipment offers an economical, fully calibrated solution for ensuring the integrity of various packaging using bubble emission method.",
@@ -671,7 +671,7 @@ export const products: Product[] = [
     },
     // LACQUER POROSITY TESTER
     {
-      id: "rlt-10b",
+      id: "lacquer-porosity-tester-rlt-10b",
       title: "Lacquer Porosity Tester RLT-10B",
       description: "Specialized tester for detecting lacquer coating defects on metal containers",
       fullDescription: "The Lacquer Porosity Tester RLT-10B from Raise Lab Equipment is designed to detect pinholes and porosity in lacquer coatings on metal containers using electrochemical principles.",
@@ -703,7 +703,7 @@ export const products: Product[] = [
       ]
     },
     {
-      id: "rlt-5b",
+      id: "lacquer-porosity-tester-rlt-5b",
       title: "Lacquer Porosity Tester RLT-5B",
       description: "Compact lacquer porosity tester for rapid quality checks",
       fullDescription: "The Lacquer Porosity Tester RLT-5B is a specialized instrument designed for quick and efficient testing of lacquer integrity on pharmaceutical and food containers.",
@@ -732,7 +732,7 @@ export const products: Product[] = [
     },
   // ANALYTICAL INSTRUMENTS
   {
-    id: "rabt-3",
+    id: "ampoule-breakpoint-tester-rabt-3",
     title: "Ampoule Breakpoint Tester RABT-3",
     description: "Specialized tester for measuring the breaking force of pharmaceutical ampoules",
     fullDescription: "The Ampoule Breakpoint Tester RABT-3 is a precision instrument designed to measure the force required to break open pharmaceutical ampoules. It ensures that ampoules are easy to open for medical professionals while maintaining structural integrity during transport and storage.",
@@ -758,7 +758,7 @@ export const products: Product[] = [
     ]
   },
   {
-    id: "mzr",
+    id: "antibiotic-zone-reader-mzr",
     title: "Antibiotic Zone Reader MZR",
     description: "Digital zone reader for antibiotic susceptibility testing",
     fullDescription: "The Antibiotic Zone Reader MZR from Raise Lab Equipment provides accurate and consistent measurement of inhibition zones for antibiotic susceptibility testing.",

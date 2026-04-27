@@ -11,41 +11,11 @@ import Footer from "@/components/Footer"
 import { generateMetadata as generateSEOMetadata, generateOrganizationSchema } from "@/lib/seo"
 import type { Metadata } from "next"
 
-export const metadata: Metadata = generateSEOMetadata({
-  title: "Raise Lab Equipment – Best Pharmaceutical & Laboratory Testing Equipment in Hyderabad, India",
-  
-  description:
-    "Raise Lab Equipment is a leading manufacturer and supplier of pharmaceutical and laboratory testing instruments in Hyderabad, India. We provide tablet testing machines, dissolution testers, hardness testers, friability testers, powder flow testers and ISO certified quality control equipment for pharma companies, research labs and universities.",
-
-  // Balanced: Google-safe + Other engines
-  keywords: [
-    // Brand
-    "Raise Lab Equipment",
-    "Raise Lab",
-
-    // Google core
-    "pharmaceutical laboratory equipment",
-    "laboratory testing instruments Hyderabad",
-    "pharma quality control equipment",
-
-    // Other search engines
-    "laboratory equipment manufacturer India",
-    "pharmaceutical testing machines",
-    "lab instruments supplier",
-    "tablet testing machines",
-    "bulk density apparatus",
-    "powder flow tester",
-    "friability tester",
-    "dissolution tester",
-    "ISO certified lab equipment",
-    "pharma lab equipment dealer",
-    "laboratory equipment supplier Hyderabad",
-    "pharmaceutical equipment India"
-  ],
-
-  url: "/",
-  type: "website"
-})
+export const metadata: Metadata = {
+  title: 'Pharmaceutical Testing Instruments Manufacturer │ Raise Lab Equipment, Hyderabad',
+  description: 'Raise Lab Equipment manufactures precision pharmaceutical testing instruments — tablet hardness testers, dissolution apparatus, disintegration testers & friability testers. ISO certified. Hyderabad, India.',
+  alternates: { canonical: 'https://www.raiselabequip.com/' },
+};
 
 export default function Home() {
   const organizationSchema = generateOrganizationSchema()
@@ -61,7 +31,10 @@ export default function Home() {
       <Navigation />
       
       <main className="flex-grow">
-        <Hero />
+        <Hero 
+          h1="Pharmaceutical Testing Instruments Manufacturer — Hyderabad, India"
+          h2="ISO-Certified Pharma Testing Equipment — Trusted by 500+ Companies"
+        />
         
         <div className="bg-background relative z-10">
           <ClientsMarquee />

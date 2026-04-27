@@ -7,27 +7,11 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import type { Metadata } from "next"
 
-export const dynamic = "force-dynamic"
-
 export const metadata: Metadata = {
-  title: "Blog - Pharmaceutical Testing Insights & Technical Guides",
-  description: "Expert insights on pharmaceutical testing, quality control best practices, laboratory equipment guides, and industry compliance standards. Technical resources from Raise Lab Equipment.",
-  keywords: [
-    "pharmaceutical testing blog",
-    "laboratory equipment guides",
-    "tablet hardness testing",
-    "dissolution testing best practices",
-    "pharmaceutical QC standards",
-    "USP compliance",
-    "laboratory testing tips",
-    "Raise Lab Equipment blog"
-  ],
-  openGraph: {
-    title: "Blog - Pharmaceutical Testing Insights | Raise Lab Equipment",
-    description: "Expert insights on pharmaceutical testing, quality control best practices, and laboratory equipment guides.",
-    type: "website",
-  },
-}
+  title: 'Pharmaceutical Testing Blog — Guides & Standards │ Raise Lab Equipment',
+  description: 'Expert guides and articles on pharmaceutical testing — tablet hardness, dissolution, disintegration, friability and powder testing standards. By Raise Lab Equipment.',
+  alternates: { canonical: 'https://www.raiselabequip.com/blog' },
+};
 
 export default async function BlogPage({
   searchParams,
@@ -61,7 +45,7 @@ export default async function BlogPage({
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 tracking-tight">
-                Industrial Insights & <span className="text-[#7F9DB1]">Technical Guides</span>
+                Pharma Testing Insights — Expert Guides from Raise Lab Equipment
               </h1>
               <p className="text-lg lg:text-xl text-white/70 max-w-2xl mx-auto font-light">
                 Deep dives into laboratory excellence, pharmaceutical compliance, and the future of quality control equipment.

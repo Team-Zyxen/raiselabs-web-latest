@@ -5,7 +5,12 @@ import { ArrowRight, Beaker, Award, Shield, Settings } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
-export default function Hero() {
+interface HeroProps {
+  h1?: string;
+  h2?: string;
+}
+
+export default function Hero({ h1, h2 }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero section">
       {/* Background Video - optimized loading */}
@@ -39,7 +44,7 @@ export default function Hero() {
             style={{ backgroundColor: 'rgba(127, 157, 177, 0.15)' }}
           >
             <Beaker className="h-4 w-4" style={{ color: '#7F9DB1' }} />
-            <span className="text-sm font-medium text-white">ISO Certified Precision Instruments</span>
+            <span className="text-sm font-medium text-white">{h2 || "ISO Certified Precision Instruments"}</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -49,11 +54,15 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-6"
           >
-            Raise Lab Equipment
-            <br />
-            <span style={{ color: '#7F9DB1' }}>
-              Excellence in Testing
-            </span>
+            {h1 || (
+              <>
+                Raise Lab Equipment
+                <br />
+                <span style={{ color: '#7F9DB1' }}>
+                  Excellence in Testing
+                </span>
+              </>
+            )}
           </motion.h1>
 
           {/* Description */}
