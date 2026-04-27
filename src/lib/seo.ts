@@ -47,7 +47,7 @@ export function generateMetadata(data: SEOData): Metadata {
       },
     },
     openGraph: {
-      type: data.type || "website",
+      type: (data.type === "article" ? "article" : "website") as "website" | "article",
       title: fullTitle,
       description: data.description,
       url: pageUrl,
