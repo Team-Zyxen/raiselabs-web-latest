@@ -284,7 +284,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     title: seo.title,
     description: seo.description,
     alternates: {
-      canonical: `https://www.raiselabequip.com/products/category/${id}`,
+      canonical: `https://raiselabequip.com/products/category/${id}`,
     },
   };
 }
