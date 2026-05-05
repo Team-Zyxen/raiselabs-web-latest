@@ -14,7 +14,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: 'Pharmaceutical Testing Instruments Manufacturer │ Raise Lab Equipment, Hyderabad',
   description: 'Raise Lab Equipment manufactures precision pharmaceutical testing instruments — tablet hardness testers, dissolution apparatus, disintegration testers & friability testers. ISO certified. Hyderabad, India.',
-  alternates: { canonical: 'https://www.raiselabequip.com/' },
+  alternates: { canonical: 'https://raiselabequip.com/' },
 };
 
 export default function Home() {
