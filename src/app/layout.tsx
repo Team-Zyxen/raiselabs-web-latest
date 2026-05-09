@@ -157,6 +157,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-D2VWB6JZHT`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-D2VWB6JZHT');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
