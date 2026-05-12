@@ -18,7 +18,8 @@ export function getAllBlogs(): Blog[] {
     const { data, content } = matter(fileContent)
 
     const filenameSlug = file.replace(/\.md$/, "").replace(/^\d{4}-\d{2}-\d{2}-/, "")
-    const slug = data.slug || filenameSlug
+    const rawSlug = data.slug || filenameSlug
+    const slug = rawSlug.replace(/[^a-zA-Z0-9\-_]/g, "")
 
     let title = data.title
     if (title === "Blog" || !title) {
