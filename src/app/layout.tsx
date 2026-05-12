@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.raiselabequip.com"),
+  metadataBase: new URL("https://raiselabequip.com"),
   title: {
     default:
       "Raise Lab Equipment | Pharmaceutical Testing Instruments Manufacturer in Hyderabad, India",
@@ -125,8 +125,8 @@ export default function RootLayout({
     "@type": ["Organization", "LocalBusiness"],
     "name": "Raise Lab Equipment Pvt. Ltd.",
     "alternateName": "RLE",
-    "url": "https://www.raiselabequip.com",
-    "logo": "https://www.raiselabequip.com/logo.png",
+    "url": "https://raiselabequip.com",
+    "logo": "https://raiselabequip.com/logo.png",
     "description": "ISO certified manufacturer of pharmaceutical testing instruments including tablet hardness testers, dissolution apparatus, disintegration testers, and friability testers. Based in Hyderabad, India.",
     "foundingDate": "2013",
     "address": {
@@ -157,6 +157,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-D2VWB6JZHT`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-D2VWB6JZHT');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

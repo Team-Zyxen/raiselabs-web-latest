@@ -10,7 +10,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: 'Pharmaceutical Testing Blog — Guides & Standards │ Raise Lab Equipment',
   description: 'Expert guides and articles on pharmaceutical testing — tablet hardness, dissolution, disintegration, friability and powder testing standards. By Raise Lab Equipment.',
-  alternates: { canonical: 'https://www.raiselabequip.com/blog' },
+  alternates: { canonical: 'https://raiselabequip.com/blog' },
 };
 
 export default async function BlogPage({

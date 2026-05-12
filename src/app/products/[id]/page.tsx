@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     title: `${product.title} Manufacturer India │ Raise Lab Equipment`,
     description: `${product.description} - USP/EP/IP compliant. Reliable pharmaceutical testing instruments from Raise Lab Equipment, Hyderabad.`,
     alternates: {
-      canonical: `https://www.raiselabequip.com/products/${id}`,
+      canonical: `https://raiselabequip.com/products/${id}`,
     },
   };
 }
