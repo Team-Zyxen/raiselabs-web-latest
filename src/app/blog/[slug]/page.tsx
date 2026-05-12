@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { getBlogBySlug, getAllBlogs, getBlogContent } from "@/lib/blogs"
 import { notFound } from "next/navigation"
 
-export const dynamic = "force-static"
+export const dynamic = "force-dynamic"
 
 export async function generateStaticParams() {
   const blogs = getAllBlogs()
