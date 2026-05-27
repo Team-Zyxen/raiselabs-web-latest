@@ -8,7 +8,7 @@ excerpt: >
   density apparatus helps pharma manufacturers optimise powder processing.
 author: Raise Lab Equipment
 date: 2026-05-23
-coverImage: /images/uploads/tap-density-apparatus-td-2-resized-1769537928475.webp
+coverImage: /images/uploads/powder-flow-tester-resized-1769537928462.jpg
 readTime: 5 min read
 category: Technical Guides
 featured: false
