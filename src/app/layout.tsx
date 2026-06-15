@@ -27,6 +27,9 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://raiselabequip.com"),
+  verification: {
+    google: "RO3337qSaMiJX4q6Pzqs_HrNnWr35ANE_QafbQhg7zI",
+  },
   title: {
     default:
       "Raise Lab Equipment | Pharmaceutical Testing Instruments Manufacturer in Hyderabad, India",
