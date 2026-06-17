@@ -155,6 +155,206 @@ const nextConfig: NextConfig = {
       { source: "/products/rlt-5b/:path*", destination: "/products/lacquer-porosity-tester-rlt-5b", permanent: true },
       { source: "/products/rabt-3/:path*", destination: "/products/ampoule-breakpoint-tester-rabt-3", permanent: true },
       { source: "/products/mzr/:path*", destination: "/products/antibiotic-zone-reader-mzr", permanent: true },
+      {
+        source: '/what-is-bulk-density-why-calculation-of-bulk-density-is-important-and-what-are-various-bulk-density-instruments',
+        destination: '/blog/what-is-bulk-density-why-calculation-of-bulk-density-is-important-and-what-are-various-bulk-density-instruments',
+        permanent: true,
+      },
+      {
+        source: '/what-is-bulk-density-why-calculation-of-bulk-density-is-important-and-what-are-various-bulk-density-instruments/',
+        destination: '/blog/what-is-bulk-density-why-calculation-of-bulk-density-is-important-and-what-are-various-bulk-density-instruments',
+        permanent: true,
+      },
+      {
+        source: '/comparing-different-types-of-dissolution-testing-equipment-focus-on-tablet-dissolution-tester',
+        destination: '/blog/comparing-different-types-of-dissolution-testing-equipment-focus-on-tablet-dissolution-tester',
+        permanent: true,
+      },
+      {
+        source: '/comparing-different-types-of-dissolution-testing-equipment-focus-on-tablet-dissolution-tester/',
+        destination: '/blog/comparing-different-types-of-dissolution-testing-equipment-focus-on-tablet-dissolution-tester',
+        permanent: true,
+      },
+      {
+        source: '/tablet-disintegration-test-apparatus',
+        destination: '/blog/tablet-disintegration-test-apparatus',
+        permanent: true,
+      },
+      {
+        source: '/tablet-disintegration-test-apparatus/',
+        destination: '/blog/tablet-disintegration-test-apparatus',
+        permanent: true,
+      },
+      {
+        source: '/mastering-gmp-cgmp-quality-standards-in-pharma',
+        destination: '/blog/mastering-gmp-cgmp-quality-standards-in-pharma',
+        permanent: true,
+      },
+      {
+        source: '/mastering-gmp-cgmp-quality-standards-in-pharma/',
+        destination: '/blog/mastering-gmp-cgmp-quality-standards-in-pharma',
+        permanent: true,
+      },
+      {
+        source: '/sieve-shaker-particle-size-analysis',
+        destination: '/blog/sieve-shaker-particle-size-analysis',
+        permanent: true,
+      },
+      {
+        source: '/sieve-shaker-particle-size-analysis/',
+        destination: '/blog/sieve-shaker-particle-size-analysis',
+        permanent: true,
+      },
+      {
+        source: '/the-comprehensive-guide-to-package-integrity-testing',
+        destination: '/blog/the-comprehensive-guide-to-package-integrity-testing',
+        permanent: true,
+      },
+      {
+        source: '/the-comprehensive-guide-to-package-integrity-testing/',
+        destination: '/blog/the-comprehensive-guide-to-package-integrity-testing',
+        permanent: true,
+      },
+      {
+        source: '/dissolution-tester-usp-1-2-5-6-and-intrinsic-methods',
+        destination: '/blog/dissolution-tester-usp-1-2-5-6-and-intrinsic-methods',
+        permanent: true,
+      },
+      {
+        source: '/dissolution-tester-usp-1-2-5-6-and-intrinsic-methods/',
+        destination: '/blog/dissolution-tester-usp-1-2-5-6-and-intrinsic-methods',
+        permanent: true,
+      },
+      {
+        source: '/a-beginners-guide-to-understanding-tablet-dissolution-testing',
+        destination: '/blog/a-beginners-guide-to-understanding-tablet-dissolution-testing',
+        permanent: true,
+      },
+      {
+        source: '/a-beginners-guide-to-understanding-tablet-dissolution-testing/',
+        destination: '/blog/a-beginners-guide-to-understanding-tablet-dissolution-testing',
+        permanent: true,
+      },
+      {
+        source: '/key-parameters-for-accurate-tablet-hardness-testing',
+        destination: '/blog/key-parameters-for-accurate-tablet-hardness-testing',
+        permanent: true,
+      },
+      {
+        source: '/key-parameters-for-accurate-tablet-hardness-testing/',
+        destination: '/blog/key-parameters-for-accurate-tablet-hardness-testing',
+        permanent: true,
+      },
+      {
+        source: '/analytical-instruments-guide-to-21-cfr-part-11-compliance',
+        destination: '/blog/analytical-instruments-guide-to-21-cfr-part-11-compliance',
+        permanent: true,
+      },
+      {
+        source: '/analytical-instruments-guide-to-21-cfr-part-11-compliance/',
+        destination: '/blog/analytical-instruments-guide-to-21-cfr-part-11-compliance',
+        permanent: true,
+      },
+      {
+        source: '/enhancing-wet-sieve-analysis-with-electromagnetic-sieve-shakers-precision-efficiency-and-practical-applications',
+        destination: '/blog/enhancing-wet-sieve-analysis-with-electromagnetic-sieve-shakers-precision-efficiency-and-practical-applications',
+        permanent: true,
+      },
+      {
+        source: '/enhancing-wet-sieve-analysis-with-electromagnetic-sieve-shakers-precision-efficiency-and-practical-applications/',
+        destination: '/blog/enhancing-wet-sieve-analysis-with-electromagnetic-sieve-shakers-precision-efficiency-and-practical-applications',
+        permanent: true,
+      },
+      {
+        source: '/the-role-of-tablet-hardness-testers-in-pharmaceutical-industry',
+        destination: '/blog/the-role-of-tablet-hardness-testers-in-pharmaceutical-industry',
+        permanent: true,
+      },
+      {
+        source: '/the-role-of-tablet-hardness-testers-in-pharmaceutical-industry/',
+        destination: '/blog/the-role-of-tablet-hardness-testers-in-pharmaceutical-industry',
+        permanent: true,
+      },
+      {
+        source: '/revolutionizing-particle-analysis-the-science-behind-electromagnetic-sieve-shakers',
+        destination: '/blog/revolutionizing-particle-analysis-the-science-behind-electromagnetic-sieve-shakers',
+        permanent: true,
+      },
+      {
+        source: '/revolutionizing-particle-analysis-the-science-behind-electromagnetic-sieve-shakers/',
+        destination: '/blog/revolutionizing-particle-analysis-the-science-behind-electromagnetic-sieve-shakers',
+        permanent: true,
+      },
+      {
+        source: '/key-process-precautions-to-ensure-accurate-friability-testing-results',
+        destination: '/blog/key-process-precautions-to-ensure-accurate-friability-testing-results',
+        permanent: true,
+      },
+      {
+        source: '/key-process-precautions-to-ensure-accurate-friability-testing-results/',
+        destination: '/blog/key-process-precautions-to-ensure-accurate-friability-testing-results',
+        permanent: true,
+      },
+      {
+        source: '/how-to-do-calibration-to-tablet-hardness-tester-and-what-parameters-need-to-be-tested',
+        destination: '/blog/how-to-do-calibration-to-tablet-hardness-tester-and-what-parameters-need-to-be-tested',
+        permanent: true,
+      },
+      {
+        source: '/how-to-do-calibration-to-tablet-hardness-tester-and-what-parameters-need-to-be-tested/',
+        destination: '/blog/how-to-do-calibration-to-tablet-hardness-tester-and-what-parameters-need-to-be-tested',
+        permanent: true,
+      },
+      {
+        source: '/dissolution-tester-calibration-and-validation-process',
+        destination: '/blog/dissolution-tester-calibration-and-validation-process',
+        permanent: true,
+      },
+      {
+        source: '/dissolution-tester-calibration-and-validation-process/',
+        destination: '/blog/dissolution-tester-calibration-and-validation-process',
+        permanent: true,
+      },
+      {
+        source: '/standard-operating-procedure-for-tap-density-apparatus-as-per-usp-standards',
+        destination: '/blog/standard-operating-procedure-for-tap-density-apparatus-as-per-usp-standards',
+        permanent: true,
+      },
+      {
+        source: '/standard-operating-procedure-for-tap-density-apparatus-as-per-usp-standards/',
+        destination: '/blog/standard-operating-procedure-for-tap-density-apparatus-as-per-usp-standards',
+        permanent: true,
+      },
+      {
+        source: '/tablet-friability-tester',
+        destination: '/blog/tablet-friability-tester-21-cfr-part-11-compliance',
+        permanent: true,
+      },
+      {
+        source: '/tablet-friability-tester/',
+        destination: '/blog/tablet-friability-tester-21-cfr-part-11-compliance',
+        permanent: true,
+      },
+      {
+        source: '/tapped-density-tester-usp-ep-astm',
+        destination: '/blog/standard-operating-procedure-for-tap-density-apparatus-as-per-usp-standards',
+        permanent: true,
+      },
+      {
+        source: '/tapped-density-tester-usp-ep-astm/',
+        destination: '/blog/standard-operating-procedure-for-tap-density-apparatus-as-per-usp-standards',
+        permanent: true,
+      },
+      {
+        source: '/tablet-hardness-tester-all-to-know-about',
+        destination: '/blog/ensuring-tablet-quality-with-hardness-testing',
+        permanent: true,
+      },
+      {
+        source: '/tablet-hardness-tester-all-to-know-about/',
+        destination: '/blog/ensuring-tablet-quality-with-hardness-testing',
+        permanent: true,
+      },
     ];
   },
 };

@@ -1,6 +1,6 @@
 ---
-id: what-is-tablet-hardness-tester?
-slug: what-is-tablet-hardness-tester?
+id: what-is-tablet-hardness-tester
+slug: what-is-tablet-hardness-tester
 title: What is a Tablet Hardness Tester? Guide for Pharma QC | Raise Lab Equipment
 excerpt: Learn what a tablet hardness tester is, how it works, and why it
   matters for pharma QC. USP/EP compliant testers by Raise Lab Equipment,
