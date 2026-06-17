@@ -105,21 +105,6 @@ const nextConfig: NextConfig = {
       },
 
       // ── Blog Pages ────────────────────────────────────────────────
-      {
-        source: "/automated-tablet-disintegration-testing-features-benefits-and-compliance/:path*",
-        destination: "/blog",
-        permanent: true,
-      },
-      {
-        source: "/dissolution-tester-calibration-and-validation-process/:path*",
-        destination: "/blog",
-        permanent: true,
-      },
-      {
-        source: "/mastering-gmp-cgmp-quality-standards-in-pharma/:path*",
-        destination: "/blog",
-        permanent: true,
-      },
 
       // ── Tag Pages ─────────────────────────────────────────────────
       {
