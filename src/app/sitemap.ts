@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { products, categories } from '@/lib/data'
+import { getAllBlogs } from '@/lib/blogs'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://raiselabequip.com'
@@ -69,5 +70,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...categoryPages, ...productPages]
+  const excludedSlugs = ['kvv', 'please-work', 'testttt', 'test-1', 'made-by-nishanth']
+  
+  const blogPages = getAllBlogs()
+    .filter((post) => !excludedSlugs.includes(post.slug))
+    .map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: post.date ? new Date(post.date) : new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
+
+  return [...staticPages, ...categoryPages, ...productPages, ...blogPages]
 }
