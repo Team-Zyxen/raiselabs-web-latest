@@ -26,8 +26,42 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const contentHtml = await getBlogContent(slug)
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": blog.title,
+    "description": blog.excerpt,
+    "url": `https://raiselabequip.com/blog/${blog.slug}`,
+    "datePublished": blog.date,
+    "dateModified": blog.date,
+    "image": blog.coverImage 
+      ? `https://raiselabequip.com${blog.coverImage}` 
+      : "https://raiselabequip.com/logo.png",
+    "author": {
+      "@type": "Organization",
+      "name": "Raise Lab Equipment Pvt. Ltd.",
+      "url": "https://raiselabequip.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Raise Lab Equipment Pvt. Ltd.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://raiselabequip.com/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://raiselabequip.com/blog/${blog.slug}`
+    }
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navigation />
       
       <main className="pt-16 lg:pt-20">

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Linkedin, Download, Phone, Mail, MapPin } from "lucide-react"
 
 export default function Footer() {
@@ -118,8 +119,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/10 pt-8 text-center text-sm text-white/80">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/80 gap-4">
           <p>© {new Date().getFullYear()} Raise Labs Equipment. All rights reserved.</p>
+          <div className="flex items-center gap-2">
+            <span>Developed and maintained by</span>
+            <a href="https://zyxen.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-medium">
+              Zyxen
+            </a>
+            <a href="https://zyxen.in" target="_blank" rel="noopener noreferrer" className="flex items-center shrink-0">
+              <Image src="/Zyxen-logo.jpeg" alt="Zyxen Logo" width={24} height={24} className="rounded-sm object-contain" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
