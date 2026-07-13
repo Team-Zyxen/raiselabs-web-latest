@@ -14,8 +14,6 @@ category: Technical Guides
 featured: false
 published: true
 ---
-
-
 Before a powder can be compressed into a tablet, encapsulated, or filled into a sachet, manufacturers need to understand how it behaves in bulk. One of the most fundamental measurements in powder characterisation is **bulk density** — and the instruments used to measure it are an essential part of any pharmaceutical powder testing setup.
 
 ## What is Bulk Density?
@@ -81,4 +79,4 @@ Raise Lab Equipment supplies **tapped density apparatus** and **powder flow t
 **Carr Index = \[(Tapped Density − Bulk Density) / Tapped Density] × 100**
 A Carr Index below 15 indicates good flow. Above 25 indicates poor flow — which may require a glidant or reformulation.\
 \
-Explore our products here: https://raiselabequip.com/products/category/powder-testing
+Explore our products here: <https://raiselabequip.com/products/category/powder-testing>
