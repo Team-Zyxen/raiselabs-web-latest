@@ -159,6 +159,6 @@ Raise Lab Equipment offers reliable Tablet Friability Testers designed to help p
 
 Explore our complete range of **Tablet Friability Testers** and pharmaceutical testing equipment at:
 
-[https://raiselabequip.com/products/category/friability-testing](https://raiselabequip.com/products/category/tablet-testing)
+<https://raiselabequip.com/products/category/friability-testing>
 
 Browse our products and discover reliable, USP/IP-compliant solutions designed for pharmaceutical manufacturing, quality control, and research laboratories.
