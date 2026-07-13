@@ -153,6 +153,6 @@ Raise Lab Equipment offers high-quality Tablet Disintegration Test Apparatus des
 
 Explore our complete range of **Tablet Disintegration Test Apparatus** and pharmaceutical testing equipment at:
 
-[https://raiselabequip.com/products/category/disintegration-testing](https://raiselabequip.com/products/category/tablet-testing)
+<https://raiselabequip.com/products/category/disintegration-testing>
 
 Browse our products and discover reliable, USP/IP-compliant solutions designed for pharmaceutical manufacturing, quality control, research laboratories, and regulatory compliance.
