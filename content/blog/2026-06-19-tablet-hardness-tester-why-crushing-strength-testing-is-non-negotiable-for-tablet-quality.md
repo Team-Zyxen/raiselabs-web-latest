@@ -181,6 +181,6 @@ Raise Lab Equipment delivers dependable Tablet Hardness Testers designed to supp
 
 Browse our complete range of Tablet Hardness Testers and pharmaceutical testing instruments:
 
-**https://raiselabequip.com/products/category/hardness-testing**
+**<https://raiselabequip.com/products/category/hardness-testing>**
 
 Discover reliable, audit-ready solutions designed for pharmaceutical production, IPQC, and quality control laboratories.
